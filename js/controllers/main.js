@@ -52,7 +52,7 @@ const renderProducts = async () => {
       productsContainer.appendChild(productCard);
     });
   } catch (err) {
-    console.error("Erro ao renderizar produtos:", err);
+    console.error("Error al renderizar productos:", err);
   }
 };
 
@@ -65,7 +65,7 @@ form.addEventListener("submit", async (event) => {
   const image = document.querySelector("[data-image]").value;
 
   if (name === "" || price === "" || image === "") {
-    alert("Por favor, preenche todos os campos");
+    alert("Por favor, Precione todos los campos");
   } else {
     try {
       const newProduct = await servicesProducts.createProduct(
@@ -73,11 +73,11 @@ form.addEventListener("submit", async (event) => {
         price,
         image
       );
-      console.log("Produto criado:", newProduct);
+      console.log("Producto creado:", newProduct);
       const newCard = createCard(newProduct);
       productsContainer.appendChild(newCard);
     } catch (error) {
-      console.error("Erro ao criar o produto:", error);
+      console.error("Error al crear un producto:", error);
     }
 
     form.reset(); // Reinicia o formulário
