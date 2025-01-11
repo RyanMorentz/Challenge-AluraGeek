@@ -6,7 +6,7 @@ const productList = async () => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error("Erro ao obter a lista de produtos:", error);
+    console.error("Error al obtener un lista de productos:", error);
   }
 };
 
@@ -21,10 +21,10 @@ const createProduct = async (name, price, image) => {
     });
 
     const data = await response.json();
-    console.log("Solicitude POST feita com sucesso:", data);
+    console.log("Solicitud POST hecha con exito:", data);
     return data;
   } catch (error) {
-    console.error("Erro na solicitude POST:", error);
+    console.error("Error al solicitar POST:", error);
   }
 };
 
@@ -36,9 +36,9 @@ const deleteProduct = async (id) => {
         "Content-Type": "application/json",
       },
     });
-    console.log(`Produto com id ${id} deletado com sucesso`);
+    console.log(`Producto con id ${id} eliminado con exito`);
   } catch (error) {
-    console.error("Erro na solicitude DELETE:", error);
+    console.error("Error al solicitar DELETE:", error);
   }
 };
 
